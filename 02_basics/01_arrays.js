@@ -19,6 +19,7 @@ const myArr2 = new Array(1, 2, 3, 4)
 // console.log(myArr.indexOf(3));
 
 // const newArr = myArr.join()
+// join operation convert it tinto string separated by array, 
 
 // console.log(myArr);
 // console.log( newArr);
