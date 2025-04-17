@@ -1,3 +1,5 @@
+// usestate hooks in react...............
+
 function Notes(){
 
 let [notes,setNotes]=useState([])
