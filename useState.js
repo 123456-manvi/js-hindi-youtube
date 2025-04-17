@@ -84,3 +84,118 @@ function App(){
 }
 
 export default App;
+
+
+
+
+// 5
+import React from 'react'
+import './App.css'
+import {useState} from 'react';
+
+
+function App(){
+    const[car,setCar]=useState({
+        brand:"ferrari",
+        model:"roma",
+        year:"2023",
+        color:"red"
+    });
+    
+    const changeColor=()=>{
+        setCar({color:"red"})
+    }
+    return(
+        <>
+        <h1>{car.brand}</h1>
+        <h2>{car.model} {car.year} {car.color} </h2>
+        <button onClick={changeColor}>Blue</button>
+        </>
+        )
+}
+
+export default App;
+
+
+
+
+// 6
+import React from 'react'
+import './App.css'
+import {useState} from 'react';
+
+
+function App(){
+    const[car,setCar]=useState({
+        brand:"ferrari",
+        model:"roma",
+        year:"2023",
+        color:"red"
+    });
+    
+    const changeColor=()=>{
+        setCar((car)=>{
+            return {...car, color:"blue"}
+        })
+    }
+    
+    
+    return(
+        <>
+        <h1>{car.brand}</h1>
+        <h2>{car.model} {car.year} {car.color} </h2>
+        <button onClick={changeColor}>Blue</button>
+        </>
+        )
+}
+
+export default App;
+
+// 7
+import React from 'react'
+import './App.css'
+import {useState} from 'react';
+
+
+function App(){
+    const[count,setCount]=useState(0);
+    
+    const increaseCount=()=>{
+        setCount(count+1)
+        setCount(prev=>prev+1)
+    }
+    
+    return (
+        <>
+        <h1>count: {count} </h1>
+        <button onClick={increaseCount}>Increase by 4</button>
+        </>
+        )
+}
+
+export default App;
+
+
+// 8
+import React from 'react'
+import './App.css'
+import {useState} from 'react';
+
+
+function App(){
+    const[count,setCount]=useState(0);
+    
+    const increaseCount=()=>{
+        setCount(count=>count+1);
+        setCount(count=>count+1);
+        
+    }
+    return (
+        <>
+        <h1>count: {count} </h1>
+        <button onClick={increaseCount}>Increase by 4</button>
+        </>
+        )
+}
+
+export default App;
