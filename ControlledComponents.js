@@ -12,3 +12,15 @@ Password:
 
 <button type="submit" disabled={!error}>Login</button>
 </form>
+
+
+// uncontrolled components.............
+
+<form onSubmit={handleSubmit}>
+<label>
+email:
+<input type="email" ref={emailRef} required />
+</label>
+
+<button type="submit">Subscribe</button>
+</form>
